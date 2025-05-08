@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/poolshark.github.io/'
+  // base: '/poolshark.github.io/'
 }));
