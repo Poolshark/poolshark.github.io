@@ -20,4 +20,5 @@ export default defineConfig(({ mode }) => ({
     },
   },
   // base: '/poolshark.github.io/'
+  base: '/'
 }));
