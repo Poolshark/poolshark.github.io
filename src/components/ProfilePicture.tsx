@@ -14,9 +14,9 @@ const ProfilePicture: React.FC = () => {
           }}
         />
         <img 
-          src="/me.jpg" 
+          src="/me-shirt.jpg" 
           alt="Profile background" 
-          className="h-full w-full object-cover object-[center_30%] transform scale-x-[-1]" 
+          className="h-full w-full object-cover object-[center_20%] transform scale-x-[-1]" 
         />
       </div>
     </div>

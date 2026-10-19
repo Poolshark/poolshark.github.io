@@ -45,22 +45,68 @@ export interface Resume {
 
 export const resume: Resume = {
   name: "Flo Ragossnig",
-  title: "Senior Developer (Full Stack) & Enthusiast",
-  summary: "Experienced technology leader with over 15 years of expertise in building and scaling software solutions. Passionate about creating high-performance teams and driving innovation through technology. Specialized in modern web development, cloud architecture, and technical leadership. Background in Astrophysics and AI. Passionate windsurfer and surfer (involved in the Freestyle Pro Tour)",
+  title: "Full-Stack Engineer | CTO | Entrepreneur",
+  summary: "Full-stack engineer, former CTO and entrepreneur with 15+ years of experience in software architecture, technical leadership and product development. Founder of Heatscoring PRO and Axiom Labs, combining hands-on engineering, SaaS development and practical AI consulting. Academic background in Astrophysics and Artificial Intelligence.",
   experience: [
+    {
+      title: "Founder & AI Consultant",
+      company: "Axiom Labs",
+      period: "2025 - Present",
+      description: [
+        "Founded an AI consultancy supporting small businesses and independent developers",
+        "Analyzed business workflows to identify practical AI applications and cost-saving opportunities",
+        "Designed and prototyped RAG systems, AI agents and automated business workflows",
+        "Set up and optimized AI development tooling, integrations and operating costs"
+      ],
+      technologies: [
+        "Python",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "OpenAI",
+        "Claude",
+        "Vertex AI",
+        "Vercel"
+      ]
+    },
+    {
+      title: "Founder & Lead Engineer",
+      company: "Heatscoring PRO",
+      period: "2025 - Present",
+      description: [
+        "Founded a white-label competition SaaS used by the PWA World Tour and Freestyle Pro Tour",
+        "Secured a paying tour customer; led commercial negotiations, pricing, onboarding and client relationships",
+        "Designed a revenue model combining event licensing, registration fees, maintenance and custom development",
+        "Built real-time scoring and broadcast feeds, load-tested for ~500 concurrent subscribers",
+        "Engineered offline-first judging, concurrency-safe scoring and automated heat transitions",
+        "Developed scoring for five disciplines, elimination brackets, rankings and secure tenant integrations",
+        "Integrated Stripe Connect payments and automated releases across five deployment environments"
+      ],
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "tRPC",
+        "PostgreSQL",
+        "Prisma",
+        "Supabase",
+        "IndexedDB",
+        "Clerk",
+        "Stripe Connect",
+        "Vercel",
+        "Playwright"
+      ]
+    },
+
     {
       title: "Chief Technology Officer",
       company: "Codeversity",
       period: "2020 - 2025",
       description: [
-        "Feature development",
-        "Prototyping new features and innovative technologies",
-        "Project development",
-        "Leading and mentoring high performance development teams",
-        "Driving innovation and research of new features",
-        "Manage technology budgets; Ressource allocation",
-        "Aligning technology initiatives with business objectives",
-        "Establishing and maintaining best practices and compliances"
+        "Led engineering teams, mentoring developers and establishing technical standards",
+        "Defined technology strategy, architecture and product development priorities",
+        "Managed engineering budgets, resources and project delivery",
+        "Drove technical innovation and aligned development with business objectives"
       ],
       technologies: ["React", "Typescript", "Javascript", "GraphQL", "Node.js", "AWS", "DGraph", "Jira", "Bitbucket", "GitLab", "Auth0", "JoT"]
     },
@@ -69,34 +115,33 @@ export const resume: Resume = {
       company: "Webleaders",
       period: "2012 - present",
       description: [
-        "Software development",
-        "Define and execute company vison",
-        "Client aquisition",
-        "Sustainable business development and growth"
+        "Founded and managed a software development and consulting business",
+        "Led client acquisition, commercial relationships and project delivery",
+        "Developed custom web applications and scalable software solutions"
       ],
-      technologies: ["PHP", "Wordpress", "React", "Next.js", "Docker", "Typescript", "Javascript", "Python", "Rust", "Go", "Github", "Bitbucket", "AWS", "Vercel", "SQL", "GraphQL", "REST", "TRPC", "JoT", "Bun", "Vite"]
+      technologies: [
+        "TypeScript", "React", "Next.js", "Node.js", "PHP", "Python", "PostgreSQL", "Docker", "AWS", "Vercel"
+      ],
     },
     {
-      title: "Technical Lead/Judge",
+      title: "Technical Lead & Competition Judge",
       company: "Freestyle Pro Tour",
       period: "2017 - present",
       description: [
-        "Led development of the company's livescoring application",
-        "Improved application performance through optimization initiatives",
-        "Mentored junior developers and established coding standards",
-        "Implemented reliable CI/CD strategy",
-        "Manage sporting events in a competitive and professional format"
+        "Developed and maintained live-scoring software and competition tools",
+        "Led technical operations and supported professional windsurfing events",
+        "Managed judging workflows, competition formats and event operations",
+        "Improved application performance and software delivery processes"
       ],
       technologies: ["PHP", "Wordpress", "Preact", "React", "Docker", "Typescript", "Javascript", "Github", "GraphQL", "REST", "JoT", "Bun"]
     },
     {
-      title: "Senior Developer (Fullstack)/Subcontractor",
+      title: "Senior Full-Stack Developer (Contract)",
       company: "Kalbeck Digital",
       period: "2020 - 2022",
       description: [
-        "Develop and integrate code for web projects",
-        "Code reviews",
-        "IT consulting (architecture, software design and standards)"
+        "Developed and integrated full-stack web applications",
+        "Provided architecture consulting, code reviews and technical guidance"
       ],
       technologies: ["Typescript", "Javascript", "Node.js", "PHP", "Wordpress", "GraphQL"]
     },
@@ -105,11 +150,10 @@ export const resume: Resume = {
       company: "University of Vienna",
       period: "2013 - 2020",
       description: [
-        "Lecturing various classes (Theoretical Astrophysics, Mathematical & Physical Methods in Astrophysics, Numerical Models, etc.)",
-        "Research activity (mainly Primordial Atmospheres and Protostellar Disks)",
-        "Develop, improve and maintain research specific computer models",
-        "Publish research findings",
-        "Assisting BSc and MSc students with their thesis"
+        "Conducted computational astrophysics research on primordial atmospheres and protostellar disks",
+        "Developed numerical simulations and scientific software",
+        "Lectured in astrophysics and supervised undergraduate and graduate students",
+        "Published scientific research findings"
       ],
       technologies: ["Fortran", "Python", "Node.js", "PHP", "LateX", "Mathematica", "Bash"]
     },
@@ -118,10 +162,9 @@ export const resume: Resume = {
       company: "Kefalos Windsurfing & Sailing",
       period: "2005 - 2019",
       description: [
-        "Oversaw core management functions, including team organization, staff motivation, and operational planning.",
-        "Manage budgets and business expenses",
-        "Building and maintaining customer base and customer-business relationships",
-        "Develop and maintain business web presence and online bokking tool"
+        "Managed centre operations, staffing and financial planning",
+        "Developed customer relationships and drove business development",
+        "Built and maintained the company website and online booking system"
       ],
       technologies: ["PHP", "Wordpress", "Google Ads", "SEO"]
     }
