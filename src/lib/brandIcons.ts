@@ -1,0 +1,62 @@
+import {
+  siAmazonwebservices,
+  siBluesky,
+  siClaude,
+  siDocker,
+  siFortran,
+  siGithub,
+  siGnubash,
+  siGooglecloud,
+  siGraphql,
+  siJavascript,
+  siLatex,
+  siNextdotjs,
+  siNodedotjs,
+  siOpenai,
+  siPostgresql,
+  siPreact,
+  siPrisma,
+  siPython,
+  siReact,
+  siStripe,
+  siSupabase,
+  siTrpc,
+  siTypescript,
+  siVercel,
+  siWolframmathematica,
+  type SimpleIcon,
+} from "simple-icons";
+
+// Named imports keep the bundle small. Importing `* as SimpleIcons`
+// pulls every brand icon (several MB) into the build.
+const icons: Record<string, SimpleIcon> = {
+  aws: siAmazonwebservices,
+  bash: siGnubash,
+  bluesky: siBluesky,
+  claude: siClaude,
+  docker: siDocker,
+  fortran: siFortran,
+  github: siGithub,
+  graphql: siGraphql,
+  javascript: siJavascript,
+  latex: siLatex,
+  mathematica: siWolframmathematica,
+  "next.js": siNextdotjs,
+  "node.js": siNodedotjs,
+  openai: siOpenai,
+  postgresql: siPostgresql,
+  preact: siPreact,
+  prisma: siPrisma,
+  python: siPython,
+  react: siReact,
+  "stripe connect": siStripe,
+  supabase: siSupabase,
+  trpc: siTrpc,
+  typescript: siTypescript,
+  vercel: siVercel,
+  "vertex ai": siGooglecloud,
+};
+
+/** Look up a brand icon by display name (case-insensitive). */
+export const getBrandIcon = (name: string): SimpleIcon | undefined =>
+  icons[name.toLowerCase()];

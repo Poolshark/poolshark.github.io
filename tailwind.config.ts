@@ -78,6 +78,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       borderRadius: {
@@ -126,6 +127,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 0.5s ease-out forwards',
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'spin-slow': 'spin 40s linear infinite',
       }
     }
   },

@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Fonts are loaded in index.html (with preconnect) for faster first paint. */
 
 @tailwind base;
 @tailwind components;
@@ -7,32 +6,33 @@
 
 @layer base {
   :root {
-    --background: 230 33% 14%;
+    --background: 232 38% 9%;
     --foreground: 210 40% 98%;
 
-    --card: 230 33% 16%;
+    --card: 231 32% 13%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 230 33% 16%;
+    --popover: 231 32% 13%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 255 83% 75%;
-    --primary-foreground: 210 40% 98%;
+    /* Dark text on the light lavender primary keeps buttons readable (WCAG AA). */
+    --primary-foreground: 232 38% 9%;
 
     --secondary: 255 60% 54%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 30%;
-    --muted-foreground: 215 20.2% 75.1%;
+    --muted: 230 25% 20%;
+    --muted-foreground: 220 20% 72%;
 
-    --accent: 255 83% 75%;
+    --accent: 231 30% 18%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 20%;
-    --input: 217.2 32.6% 20%;
+    --border: 230 24% 21%;
+    --input: 230 24% 21%;
     --ring: 255 83% 75%;
 
     --radius: 0.5rem;
@@ -85,6 +85,19 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Keep anchored sections clear of the fixed header */
+  section[id] {
+    scroll-margin-top: 4rem;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.35);
+  }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -117,6 +130,11 @@
   .card-hover {
     @apply hover:shadow-[0_0_15px_rgba(155,135,245,0.3)] transition-shadow duration-300;
   }
+
+  .bg-dot-grid {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
   
   .animate-delay-100 {
     animation-delay: 100ms;
@@ -136,5 +154,17 @@
   
   .animate-delay-500 {
     animation-delay: 500ms;
+  }
+}
+
+/* Kept outside @layer so it overrides the `opacity-0 animate-fade-in` utilities. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
   }
 }

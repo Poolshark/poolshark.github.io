@@ -14,10 +14,20 @@ export interface Education {
   description?: string;
 }
 
-export interface Skill {
-  name: string;
-  level?: number; // 1-10
-  category: 'frontend' | 'backend' | 'devops' | 'management' | 'other';
+export type SkillGroupId = 'ai' | 'frontend' | 'backend' | 'cloud' | 'leadership' | 'science';
+
+// Skills are grouped by area and described with real context
+// instead of self-rated scores.
+export interface SkillGroup {
+  id: SkillGroupId;
+  title: string;
+  summary: string;
+  skills: string[];
+}
+
+export interface Highlight {
+  value: string;
+  label: string;
 }
 
 export interface Project {
@@ -31,9 +41,10 @@ export interface Resume {
   name: string;
   title: string;
   summary: string;
+  highlights: Highlight[];
   experience: Experience[];
   education: Education[];
-  skills: Skill[];
+  skills: SkillGroup[];
   projects?: Project[];
   contact: {
     email: string;
@@ -46,11 +57,16 @@ export interface Resume {
 export const resume: Resume = {
   name: "Flo Ragossnig",
   title: "Full-Stack Engineer | CTO | Entrepreneur",
-  summary: "Full-stack engineer, former CTO and entrepreneur with 15+ years of experience in software architecture, technical leadership and product development. Founder of Heatscoring PRO and Axiom Labs, combining hands-on engineering, SaaS development and practical AI consulting. Academic background in Astrophysics and Artificial Intelligence.",
+  summary: "Full-stack engineer, former CTO and entrepreneur with 15+ years of experience in software architecture, technical leadership and product development. Founder of Heatscoring PRO and Synaptra Labs, combining hands-on engineering, SaaS development and practical AI consulting. Academic background in Astrophysics and Artificial Intelligence.",
+  highlights: [
+    { value: "15+", label: "Years building software" },
+    { value: "3", label: "Companies founded" },
+    { value: "2", label: "MSc degrees" }
+  ],
   experience: [
     {
       title: "Founder & AI Consultant",
-      company: "Axiom Labs",
+      company: "Synaptra Labs",
       period: "2025 - Present",
       description: [
         "Founded an AI consultancy supporting small businesses and independent developers",
@@ -174,7 +190,7 @@ export const resume: Resume = {
       degree: "Master of Science in Artificial Intelligence",
       institution: "IU International University of Applied Sciences, Munich, Germany",
       period: "2024 - 2025",
-      description: "Focus on NLP and Computer Vision. Special focus on Vusual Question Answering Systems."
+      description: "Focus on NLP and Computer Vision. Special focus on Visual Question Answering Systems."
     },
     {
       degree: "Master of Science in Astronomy and Astrophysics",
@@ -186,28 +202,46 @@ export const resume: Resume = {
       degree: "Bachelor of Science in Astronomy and Astrophysics",
       institution: "University of Vienna, Vienna, Austria",
       period: "2008 - 2011",
-      description: "Computional Science. Focus on Celestial Mechanics."
+      description: "Computational Science. Focus on Celestial Mechanics."
     }
   ],
   skills: [
-    { name: "React", level: 9, category: "frontend" },
-    { name: "Next.js", level: 9, category: "frontend" },
-    { name: "TypeScript", level: 9, category: "frontend" },
-    { name: "Javascript", level: 8, category: "frontend" },
-    { name: "Node.js", level: 8, category: "backend" },
-    { name: "Python", level: 7, category: "backend" },
-    { name: "Fortran", level: 8, category: "backend" },
-    { name: "GraphQL", level: 8, category: "backend" },
-    { name: "REST", level: 9, category: "backend" },
-    { name: "AWS", level: 8, category: "devops" },
-    { name: "TRPC", level: 7, category: "backend" },
-    { name: "Docker", level: 8, category: "devops" },
-    { name: "Vercel", level: 7, category: "devops" },
-    { name: "CI/CD", level: 9, category: "devops" },
-    { name: "System Architecture", level: 9, category: "management" },
-    { name: "Team Leadership", level: 8, category: "management" },
-    { name: "Agile Methodologies", level: 8, category: "management" },
-    { name: "Product Strategy", level: 8, category: "management" }
+    {
+      id: "ai",
+      title: "AI & LLMs",
+      summary: "Practical AI for real businesses: retrieval, agents and workflow automation, backed by an MSc in Artificial Intelligence.",
+      skills: ["OpenAI", "Claude", "Vertex AI", "RAG Systems", "AI Agents", "Workflow Automation", "NLP", "Computer Vision"]
+    },
+    {
+      id: "frontend",
+      title: "Frontend",
+      summary: "Real-time, offline-first interfaces used live by judges and broadcast feeds at international events.",
+      skills: ["React", "Next.js", "TypeScript", "JavaScript", "Preact", "IndexedDB"]
+    },
+    {
+      id: "backend",
+      title: "Backend & Data",
+      summary: "Type-safe APIs, concurrency-safe data models and payments for multi-tenant SaaS.",
+      skills: ["Node.js", "tRPC", "GraphQL", "REST", "PostgreSQL", "Prisma", "Supabase", "Stripe Connect"]
+    },
+    {
+      id: "cloud",
+      title: "Cloud & DevOps",
+      summary: "Automated releases across multiple environments, with end-to-end tests and load testing before anything ships.",
+      skills: ["AWS", "Vercel", "Docker", "CI/CD", "Playwright"]
+    },
+    {
+      id: "leadership",
+      title: "Leadership & Product",
+      summary: "Five years as CTO and three companies founded: technical direction, mentoring teams and owning client relationships.",
+      skills: ["System Architecture", "Team Leadership", "Mentoring", "Technology Strategy", "Product Strategy", "Agile Methodologies"]
+    },
+    {
+      id: "science",
+      title: "Scientific Computing",
+      summary: "Seven years of computational astrophysics research, building numerical simulations of protostellar disks.",
+      skills: ["Fortran", "Python", "Numerical Simulation", "Mathematica", "LaTeX", "Bash"]
+    }
   ],
   contact: {
     email: "flo.ragossnig@icloud.com",

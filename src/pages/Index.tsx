@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -14,11 +13,11 @@ const Index: React.FC = () => {
     // Update document title with the name from resume
     document.title = `${resume.name} | ${resume.title}`;
   }, []);
-  
+
   return (
-    <div className="bg-background text-foreground min-h-screen">
+    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Header />
-      <main className="pt-16"> {/* Adding padding to account for the fixed header */}
+      <main>
         <Hero />
         <Experience />
         <Skills />

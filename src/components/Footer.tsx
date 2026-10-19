@@ -1,21 +1,18 @@
-
 import React from "react";
+import { resume } from "@/data/resume";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
-    <footer className="py-8 border-t border-border bg-card/30">
-      <div className="container">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center">
-            <span className="text-xl font-mono font-bold tech-gradient">FR</span>
-          </div>
-          
-          <p className="text-muted-foreground text-sm mt-4 md:mt-0">
-            © {currentYear} Flo Ragossnig. All Rights Reserved.
-          </p>
-        </div>
+    <footer className="border-t border-border/60 py-10">
+      <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
+        <a href="#about" className="font-mono text-xl font-bold tech-gradient" aria-label="Back to top">
+          FR
+        </a>
+        <p className="text-sm text-muted-foreground">
+          © {currentYear} {resume.name}. All rights reserved.
+        </p>
       </div>
     </footer>
   );
