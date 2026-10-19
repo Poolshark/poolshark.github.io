@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-4 opacity-0 animate-fade-in animate-delay-400">
             <Button size="lg" className="shadow-lg shadow-primary/20" asChild>
-              <a href="/cv.pdf" download>
+              <a href="/cv.pdf" download="Flo-Ragossnig-CV.pdf">
                 <Download aria-hidden="true" />
                 Download CV
               </a>

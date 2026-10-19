@@ -11,7 +11,7 @@ const Education: React.FC = () => {
         <SectionHeading index="03" eyebrow="Education" title="Academic background" />
 
         <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {resume.education.map((edu, index) => (
+          {resume.education.filter((edu) => !edu.cvOnly).map((edu, index) => (
             <Reveal as="li" key={edu.degree} delay={index * 80}>
               <article className="flex h-full flex-col rounded-2xl border border-border/70 bg-card/50 p-6 backdrop-blur-sm transition-colors duration-300 hover:border-primary/40">
                 <div className="flex items-center justify-between gap-4">

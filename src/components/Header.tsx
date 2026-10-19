@@ -49,7 +49,7 @@ const Header: React.FC = () => {
         </nav>
 
         <Button variant="outline" className="hidden bg-transparent md:inline-flex" asChild>
-          <a href="/cv.pdf" download>
+          <a href="/cv.pdf" download="Flo-Ragossnig-CV.pdf">
             <FileText aria-hidden="true" />
             Resume
           </a>
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
               ))}
             </nav>
             <Button className="mt-8 w-full" asChild>
-              <a href="/cv.pdf" download>
+              <a href="/cv.pdf" download="Flo-Ragossnig-CV.pdf">
                 <FileText aria-hidden="true" />
                 Download CV
               </a>
